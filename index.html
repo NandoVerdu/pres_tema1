@@ -9,6 +9,8 @@
 		<link rel="stylesheet" href="dist/reset.css">
 		<link rel="stylesheet" href="dist/reveal.css">
 		<link rel="stylesheet" href="dist/theme/sky.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
 
 		<!-- Theme used for syntax highlighted code -->
 		<link rel="stylesheet" href="plugin/highlight/monokai.css">
@@ -66,9 +68,9 @@
 					</ul>
 				</section>
 				<section>
-					<h3 style="color:mediumseagreen;">Impostos que afecten a l'empresa</h3>
+					<h3 style="color:mediumseagreen;" >Impostos que afecten a l'empresa</h3>
 					<ul > 
-						<li class="fragment">Impost sobre el valor afegit (IVA)</li>
+						<li class="fragment" >Impost sobre el valor afegit (IVA)</li>
 						<li class="fragment">Impost sobre societats (IS)</li>
 						<li class="fragment">Impost sobre activitats econòmiques (IAE)</li>
 						<li class="fragment">Impost sobre Béns Immobles (IBI)</li>
@@ -105,12 +107,20 @@
 			// - https://revealjs.com/config/
 			Reveal.initialize({
 				hash: true,
+				transition:'concave',
 
 				// Learn about plugins: https://revealjs.com/plugins/
 				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ],
-				
+				animated: {
+      'H1':{'animated':'slideInDown'},
+      'IMG':{'animated':'backInDown', 'repeat': 'repeat-2', 'speed':'slower'},
+      'P':{'animated':'bounceInRight', 'speed':'fast'},
+      'UL':{'animated':'jello', 'repeat': 'infinite', 'speed':'slower'}
+    },
 
 			});
 		</script>
+		
+		
 	</body>
 </html>
